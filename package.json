@@ -1,12 +1,12 @@
 {
-  "name": "v8-profiler",
+  "name": "@risingstack/v8-profiler",
   "version": "5.7.0",
   "description": "node bindings for the v8 profiler",
-  "homepage": "http://github.com/node-inspector/v8-profiler",
+  "homepage": "http://github.com/RisingStack/v8-profiler",
   "author": "Danny Coates <dannycoates@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git://github.com/node-inspector/v8-profiler.git"
+    "url": "git://github.com/RisingStack/v8-profiler.git"
   },
   "contributors": [
     {
@@ -15,15 +15,19 @@
     {
       "name": "3y3",
       "email": "3y3@bk.ru"
+    },
+    {
+      "name": "David Szakallas",
+      "email": "david.szakallas@risingstack.com"
     }
   ],
   "license": "BSD-2-Clause",
   "binary": {
     "module_name": "profiler",
-    "module_path": "./build/{module_name}/v{version}/{node_abi}-{platform}-{arch}/",
-    "remote_path": "./{module_name}/v{version}/",
+    "module_path": "./build/@risingstack/{module_name}/v{version}/{node_abi}-{platform}-{arch}/",
+    "remote_path": "repo/v1/@risingstack/{module_name}/dist/v{version}/",
     "package_name": "{node_abi}-{platform}-{arch}.tar.gz",
-    "host": "https://node-inspector.s3.amazonaws.com/"
+    "host": "https://oss.risingstack.com/"
   },
   "keywords": [
     "profiler",
@@ -44,6 +48,9 @@
     "mocha": "^1.20.1",
     "rimraf": "^2.4.4"
   },
+  "bundledDependencies": [
+    "node-pre-gyp"
+  ],
   "scripts": {
     "preinstall": "node -e 'process.exit(0)'",
     "install": "node-pre-gyp install --fallback-to-build",
