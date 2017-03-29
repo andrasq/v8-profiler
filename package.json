@@ -1,6 +1,6 @@
 {
   "name": "@risingstack/v8-profiler",
-  "version": "5.7.0",
+  "version": "5.7.4",
   "description": "node bindings for the v8 profiler",
   "homepage": "http://github.com/RisingStack/v8-profiler",
   "author": "Danny Coates <dannycoates@gmail.com>",
@@ -48,9 +48,6 @@
     "mocha": "^1.20.1",
     "rimraf": "^2.4.4"
   },
-  "bundledDependencies": [
-    "node-pre-gyp"
-  ],
   "scripts": {
     "preinstall": "node -e 'process.exit(0)'",
     "install": "node-pre-gyp install --fallback-to-build",
