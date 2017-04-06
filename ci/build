@@ -7,7 +7,7 @@ for version in $NODE_MATRIX; do
   npm install
   node-pre-gyp rebuild --build-from-source
   npm test
-  if [[ -n $CIRCLE_TAG ]]; then
+  if [[ -n $CIRCLE_TAG ]] || [[ -n $FORCE_PUBLISH ]]; then
     node-pre-gyp package testpackage publish --verbose
     INSTALL_RESULT=$(npm install --fallback-to-build=false > /dev/null)$? || true
     if [[ $INSTALL_RESULT != 0 ]]; then node-pre-gyp unpublish; false; fi
