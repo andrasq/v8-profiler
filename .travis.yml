@@ -1,22 +1,14 @@
+# OS X build only
+
 sudo: false
 language: cpp
 compiler: gcc
 
 os:
-  - linux
   - osx
-
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - gcc-4.9
-      - g++-4.9
 
 env:
   matrix:
-    - export NODE_VERSION="0.10"
     - export NODE_VERSION="0.12"
     - export NODE_VERSION="4"
     - export NODE_VERSION="5"
@@ -29,19 +21,10 @@ git:
   depth: 1
 
 before_install:
-  - if [ $TRAVIS_OS_NAME == "linux" ]; then
-      export CC=/usr/bin/gcc-4.9;
-      export CXX=/usr/bin/g++-4.9;
-    fi
-
   - rm -rf ~/.nvm/ && git clone --depth 1 "https://github.com/creationix/nvm.git" ~/.nvm
   - source ~/.nvm/nvm.sh
   - nvm install $NODE_VERSION
   - nvm use $NODE_VERSION
-
-  - if [ $NODE_VERSION == "0.10" ]; then
-      npm -g install npm@latest-2;
-    fi
 
   - export PATH="./node_modules/.bin/:$PATH"
 

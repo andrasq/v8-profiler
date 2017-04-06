@@ -51,6 +51,7 @@
   "scripts": {
     "preinstall": "node -e 'process.exit(0)'",
     "install": "node-pre-gyp install --fallback-to-build",
+    "build": "node-pre-gyp rebuild --build-from-source",
     "rebuild": "node-pre-gyp rebuild",
     "release": "node ./tools/release.js $@",
     "test": "mocha --debug"
