@@ -8,6 +8,14 @@ os:
   - osx
   - linux
 
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - gcc-4.9
+      - g++-4.9
+
 env:
   matrix:
     - export NODE_VERSION="0.12"
