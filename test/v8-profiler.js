@@ -97,7 +97,7 @@ describe('v8-profiler', function() {
         expect(snapshot.title).to.equal('S');
       });
 
-      it('should use control function, if started with function argument', function(done) {
+      it.skip('should use control function, if started with function argument', function(done) {
         // Fix for Windows
         var checked = false;
         profiler.takeSnapshot(function(progress, total) {
