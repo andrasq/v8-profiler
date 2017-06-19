@@ -54,6 +54,6 @@
     "build": "node-pre-gyp rebuild --build-from-source",
     "rebuild": "node-pre-gyp rebuild",
     "release": "node ./tools/release.js $@",
-    "test": "mocha --debug"
+    "test": "mocha"
   }
 }
