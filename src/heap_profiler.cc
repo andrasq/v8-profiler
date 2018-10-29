@@ -74,6 +74,7 @@ namespace nodex {
 #endif
 
 #if (NODE_MODULE_VERSION > 0x0038)
+    control = control; // silence the "unused variable" warning
     const HeapSnapshot* snapshot = v8::Isolate::GetCurrent()->GetHeapProfiler()->TakeHeapSnapshot();
 #elif (NODE_MODULE_VERSION > 0x002C)
     const HeapSnapshot* snapshot = v8::Isolate::GetCurrent()->GetHeapProfiler()->TakeHeapSnapshot(control);
