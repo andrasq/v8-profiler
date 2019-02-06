@@ -1,6 +1,6 @@
 {
-  "name": "@risingstack/v8-profiler",
-  "version": "5.7.12",
+  "name": "andrasq-v8-profiler",
+  "version": "5.7.12-c",
   "description": "node bindings for the v8 profiler",
   "homepage": "http://github.com/RisingStack/v8-profiler",
   "author": "Danny Coates <dannycoates@gmail.com>",
