@@ -1,12 +1,12 @@
 {
   "name": "andrasq-v8-profiler",
-  "version": "5.7.12-c",
+  "version": "5.7.12-d",
   "description": "node bindings for the v8 profiler",
   "homepage": "http://github.com/RisingStack/v8-profiler",
   "author": "Danny Coates <dannycoates@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git://github.com/RisingStack/v8-profiler.git"
+    "url": "git://github.com/andrasq/v8-profiler.git"
   },
   "contributors": [
     {
@@ -19,16 +19,13 @@
     {
       "name": "David Szakallas",
       "email": "david.szakallas@risingstack.com"
+    },
+    {
+      "name": "andrasq"
     }
   ],
+  "readme": "see readme.md in the repo",
   "license": "BSD-2-Clause",
-  "binary": {
-    "module_name": "profiler",
-    "module_path": "./build/@risingstack/{module_name}/v{version}/{node_abi}-{platform}-{arch}/",
-    "remote_path": "repo/v1/@risingstack/{module_name}/dist/v{version}/",
-    "package_name": "{node_abi}-{platform}-{arch}.tar.gz",
-    "host": "https://oss.risingstack.com/"
-  },
   "keywords": [
     "profiler",
     "inspector"
@@ -38,22 +35,13 @@
   },
   "main": "v8-profiler",
   "dependencies": {
-    "nan": "^2.5.1",
-    "@risingstack/node-pre-gyp": "^0.6.35"
+    "nan": "2.13.2"
   },
   "devDependencies": {
-    "aws-sdk": "^2.0.0",
     "chai": "^1.9.1",
-    "co": "^4.6.0",
-    "mocha": "^3.4.2",
-    "rimraf": "^2.4.4"
+    "mocha": "^3.4.2"
   },
   "scripts": {
-    "preinstall": "node -e 'process.exit(0)'",
-    "install": "node-pre-gyp install --fallback-to-build",
-    "build": "node-pre-gyp rebuild --build-from-source",
-    "rebuild": "node-pre-gyp rebuild",
-    "release": "node ./tools/release.js $@",
     "test": "mocha"
   }
 }

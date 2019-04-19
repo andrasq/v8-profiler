@@ -1,7 +1,10 @@
-var binary = require('@risingstack/node-pre-gyp');
-var path = require('path');
-var bindingPath = binary.find(path.resolve(path.join(__dirname, 'package.json')));
-var binding = require(bindingPath);
+// AR: do not require node-pre-gyp
+//var binary = require('@risingstack/node-pre-gyp');
+//var path = require('path');
+//var bindingPath = binary.find(path.resolve(path.join(__dirname, 'package.json')));
+//var binding = require(bindingPath);
+
+var binding = require('./build/Release/profiler');
 
 var Stream = require('stream').Stream,
     inherits = require('util').inherits;
