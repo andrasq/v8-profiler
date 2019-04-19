@@ -1,6 +1,6 @@
 {
   "name": "andrasq-v8-profiler",
-  "version": "5.7.12-d",
+  "version": "5.7.12-e",
   "description": "node bindings for the v8 profiler",
   "homepage": "http://github.com/RisingStack/v8-profiler",
   "author": "Danny Coates <dannycoates@gmail.com>",
@@ -25,6 +25,7 @@
     }
   ],
   "readme": "see readme.md in the repo",
+  "files": ["LICENSE", "binding.gyp", "readme.md", "src", "v8-profiler.js"],
   "license": "BSD-2-Clause",
   "keywords": [
     "profiler",
