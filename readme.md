@@ -1,4 +1,8 @@
-[![Build Status](https://secure.travis-ci.org/RisingStack/v8-profiler.png?branch=master)](http://travis-ci.org/RisingStack/v8-profiler)
+[![Build Status](https://api.travis-ci.org/andrasq/v8-profiler.svg?branch=master)](https://travis-ci.org/andrasq/v8-profiler?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/andrasq/v8-profiler/badge.svg?branch=master)](https://coveralls.io/github/andrasq/v8-profiler?branch=master)
+
+This is a fork of @risingstack/v8-profiler@5.7.12, modified to work with node-v10 and to not need node-pre-gyp.
+
 
 v8-profiler provides [node](http://github.com/ry/node) bindings for the v8
 profiler and integration with [node-inspector](http://github.com/dannycoates/node-inspector)
