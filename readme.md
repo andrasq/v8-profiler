@@ -2,6 +2,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/andrasq/v8-profiler/badge.svg?branch=@andrasq)](https://coveralls.io/github/andrasq/v8-profiler?branch=@andrasq)
 
 This is a fork of @risingstack/v8-profiler@5.7.12, modified to work with node-v10 and to not need node-pre-gyp.
+<hr>
 
 
 v8-profiler provides [node](http://github.com/ry/node) bindings for the v8
