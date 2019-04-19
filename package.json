@@ -2,12 +2,16 @@
   "name": "andrasq-v8-profiler",
   "version": "5.7.12-e",
   "description": "node bindings for the v8 profiler",
-  "homepage": "http://github.com/RisingStack/v8-profiler",
+  "main": "v8-profiler",
+  "files": ["LICENSE", "binding.gyp", "readme.md", "src", "v8-profiler.js"],
+  "repository": { "type": "git", "url": "https://github.com/andrasq/v8-profiler/tree/@andrasq" },
+  "homepage": "http://github.com/andrasq/v8-profiler/tree/@andrasq",
+  "readme": "see readme.md in the repo",
+  "license": "BSD-2-Clause",
+  "keywords": ["profiler", "inspector", "v8-profiler", "trace", "snapshot"],
+  "engines": { "node": ">=0.10" },
+
   "author": "Danny Coates <dannycoates@gmail.com>",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/andrasq/v8-profiler/tree/@andrasq"
-  },
   "contributors": [
     {
       "name": "Miroslav Bajtoš"
@@ -24,17 +28,7 @@
       "name": "andrasq"
     }
   ],
-  "readme": "see readme.md in the repo",
-  "files": ["LICENSE", "binding.gyp", "readme.md", "src", "v8-profiler.js"],
-  "license": "BSD-2-Clause",
-  "keywords": [
-    "profiler",
-    "inspector"
-  ],
-  "engines": {
-    "node": ">=0.10"
-  },
-  "main": "v8-profiler",
+
   "dependencies": {
     "nan": "2.13.2"
   },
@@ -42,6 +36,7 @@
     "chai": "^1.9.1",
     "mocha": "^3.4.2"
   },
+
   "scripts": {
     "coverage": "nyc -r text -r lcov npm test",
     "clean": "rm -rf .nyc_output/ coverage/",
