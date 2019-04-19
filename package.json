@@ -6,7 +6,7 @@
   "author": "Danny Coates <dannycoates@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git://github.com/andrasq/v8-profiler.git"
+    "url": "git://github.com/andrasq/v8-profiler/tree/@andrasq"
   },
   "contributors": [
     {
@@ -42,6 +42,8 @@
     "mocha": "^3.4.2"
   },
   "scripts": {
+    "coverage": "nyc -r text -r lcov npm test",
+    "clean": "rm -rf .nyc_output/ coverage/",
     "test": "mocha"
   }
 }
